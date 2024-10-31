@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LoginAutomationWithReport {
 
     private static final String FROM_EMAIL = "pramodaskdrive01@gmail.com";
-    private static final String PASSWORD = "iyzxadvqmtuihehu";
+    private static final String PASSWORD = "--------pass-------";
     private static final String TO_EMAIL = "pramodask2003@gmail.com";
     private static final String SUBJECT = "API Test Result";
     private static WebDriver driver;
@@ -101,20 +101,7 @@ public class LoginAutomationWithReport {
     }
 
     public void addTestResult(String username,String password, String status) {
-
-        String iconHtml;
-
-        if(Objects.equals(status, "Passed")){
-            iconHtml = "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzYzRTZCRSIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMTAgMy41YS41NS41NSAwIDEgMSAxLjEgLjg2TDYuMTYgMTMuNTZhLjU1LjU1IDAgMCAxLS43NyAwTDIuNSA5LjI4YS41NS41NSAwIDAgMSAuNy0uNzFsMy4xMiAzLjEyaDEuOTZ6Ii8+PC9zdmc+\" width=\"16\" height=\"16\">";
-
-        }
-        else{
-            iconHtml = "<img src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI2ZlNjI2MiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMy41IDMuNWEuNDEuNDEgMCAwIDEgLjU3LS4wOUw4IDcuNDdsMi44LS4yOGEuNDEuNDEgMCAwIDEgLjEwLjcxbC0zLjQgMy40Yy0uMTYuMTUtLjQzLjE1LS41OC4wbC0zLjQtMy40Yy0uMTUuMTUtLjM2LjE0LS41LjAxbC0uMi0uMmMtLjEzLS4xMy0uMTQtLjM2LS4wMS0uNTNsMy41LTMuNXoiLz48L3N2Zz4=\" width=\"16\" height=\"16\">";
-
-        }
-
-
-        String row = "<tr><td>" + username + "</td><td>" + password + "</td><td>" + status + iconHtml + "</td></tr>";
+        String row = "<tr><td>" + username + "</td><td>" + password + "</td><td>" + status + "</td></tr>";
         testResults.add(row);
     }
 
